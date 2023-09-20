@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(230, 230, 230);
+    color: #000;
+    font-family: 'Italianno', cursive;
+    display: flex
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    /*ancho máximo de la página*/
+    margin: 20px auto;
+    /*auto permite centrar nuestra página en forma horizontal*/
+    display: grid;
+    gap: 20px;
+    /*nos ahorramos tenes que poner márgenes entre los elementos*/
+
+    /*3 columnas: contenido (con 2 widgets) + sidebar*/
+    grid-template-columns: repeat(4, 1fr);
+
+    /*4 filas: header, contenido, widgets, footer*/
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "encabezado encabezado encabezado encabezado"
+        "sidebar contenido contenido contenido"
+        "sidebar widget-1 widget-2 widget-3"
+        "pie pie pie pie";
+}
+
+.contenedor>div,
+.contenedor .encabezado,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .pie {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contenedor .encabezado {
+    background: url(./img/carrusel3.png);
+    position: relative;
+    grid-area: encabezado;
+    height: 400px;
+    color: antiquewhite;
+    font-size: 30px;
+    display: grid;
+
+
+}
+
+.contenedor .contenido {
+    background: url(./img/fondo\ contenido.png);
+
+    grid-area: contenido;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.contenedor .sidebar {
+    background: rgb(250, 157, 196);
+    /*utilizamos flexbox para alinear el contenido*/
+    display: block;
+    align-items: center;
+    justify-content: center;
+    grid-area: sidebar;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+    float: none;
+    
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2,
+.contenedor .widget-3 {
+    background: lightskyblue;
+    color: #000;
+    height: 100px;
+  
+    /*utilizamos flexbox para alinear el contenido*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .widget-1 {
+    grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+    grid-area: widget-2;
+}
+
+.contenedor .widget-3 {
+    grid-area: widget-3;
+}
+
+
+.contenedor .pie {
+    background: darkblue;
+    color: #fff;
+    grid-area: pie;
+}
+
+.encabezado1 {
+    text-align: right;
+    font-size: 65px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+            "sidebar sidebar sidebar sidebar"
+            "contenido contenido contenido contenido"
+            "widget-1 widget-1 widget-2 widget-3"
+            "pie pie pie pie";
+    }
+
+    .contenedor .encabezado {
+        background: url(./img/carrusel3small.png);
+        position: relative;
+        grid-area: encabezado;
+        height: 400px;
+
+        display: grid;
+
+
+    }
+
+    .encabezado1 {
+        text-align: right;
+        font-size: 40px;
+        padding: 5px;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+            "contenido contenido contenido contenido"
+            "widget-1 widget-1 widget-1 widget-1"
+            "widget-2 widget-2 widget-2 widget-2"
+            "widget-2 widget-2 widget-2 widget-3"
+            "sidebar sidebar sidebar sidebar"
+            "pie pie pie pie";
+
+    }
+
+
+    .contenedor .encabezado {
+        background: url(./img/carrusel3small.png);
+        position: relative;
+        grid-area: encabezado;
+        height: 400px;
+        color: rgb(254, 248, 254);
+        font-size: 30px;
+        font-weight: lighter;
+
+        display: grid;
+
+
+    }
+
+    .encabezado1 {
+        text-align: right;
+        font-size: 40px;
+        font-weight: lighter;
+        padding: 5px;
+    }
+}
