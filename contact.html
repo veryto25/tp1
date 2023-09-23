@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos_contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Courgette&family=Dancing+Script&family=Italianno&family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Dime que sí!</title>
+    <link rel="icon" href="./img/noviaicono.ico.ico">
+
+</head>
+
+<body>
+
+    <section class="container">
+
+        <main class="content">
+
+            <section class="contact">			
+                <h2>Formulario de contacto</h2>
+        
+                <form action="" method="post">				
+                    <h3>Escríbenos y en breve nos comunicaremos contigo</h3>
+                    
+                    <div>
+                        <label for="nombre" class="colocar_nombre">Nombre<span class="obligatorio"> *</span></label>
+                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                    </div>
+                
+                    <div>
+                        <label for="email" class="colocar_email">Email<span class="obligatorio"> *</span></label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                    </div>
+            
+                    <div>
+                        <label for="telefone" class="colocar_telefono">Teléfono</label>
+                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                    </div>			
+                
+                    <div>
+                        <label for="asunto" class="colocar_asunto">Asunto<span class="obligatorio"> *</span></label>
+                        <input type="text" name="introducir_asunto" id="asunto" required="obligatorio" placeholder="Escribe un asunto">
+                    </div>		
+                
+                    <div>
+                        <label for="mensaje" class="colocar_mensaje">Mensaje<span class="obligatorio"> *</span></label>                     
+                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                    </div>	  								
+                
+                    <button type="submit" name="enviar_formulario" id="enviar"><p>ENVIAR</p></button>
+    
+                    <div class="aviso">
+                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </div>
+                    
+                </form>         
+    
+            </section>
+    
+        </main>
+
+        <aside class="aside">
+
+            <a class="active" href="./index.html">Home</a>
+            <a href="#news">News</a>
+            <a href="./contact.html">Contact</a>
+            <a href="#about">About</a>
+
+        </aside>
+
+
+        <footer class="foot">
+            <h3>FOOTER</h3>
+        </footer>
+
+    </section>
+
+</body>
+
+</html>
