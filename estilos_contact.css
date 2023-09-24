@@ -5,8 +5,12 @@
 }
 
 body {
-    background: rgb(230, 230, 230);
-    color: #000;
+    background-image: radial-gradient(circle, rgba(250,157,201,0.2) 0%, rgba(253,226,226,0.1) 100%) ,url(./img/brideOne.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    background-attachment: fixed;
+
     font-family: 'Italianno', cursive;
     display: flex;
 }
@@ -43,11 +47,12 @@ body {
 
 .aside a{
     color: #fff;
+    padding: 5px;
 }
 
 .aside a:hover{
     color: #a25ad696;
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: .2s;
 }
 
@@ -78,7 +83,7 @@ form{
     border-radius: 10px;  
     padding: 20px 20px; 
     background-color: rgba(176, 78, 233, 0.2);
-    color: white;
+    color: #9c3be0;
 }
 
 input{
@@ -128,7 +133,7 @@ button{
 button:hover{
     background-color: #c451a9;
     transition: 0.2s;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 
@@ -166,8 +171,36 @@ form textarea:focus{
     padding: 20px;
 }
 
+.image{
+    grid-area: image;
+
+}
+
+.image img{
+    
+    border-radius: 10px;
+}
+
+
 
 /* media */
 
 
+@media (width >= 768px) {
 
+    /* .container{
+
+        grid-template-areas: "aside aside" "contact image" "foot foot";
+
+    } */
+
+    .aside{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .aside a{
+        padding: 20px;
+    }
+
+}
