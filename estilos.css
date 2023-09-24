@@ -139,6 +139,8 @@ body {
     height: 260px;
     background: url(./img/cortea.png);
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    transition: all 0.20;
 }
 
 
