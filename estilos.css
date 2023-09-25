@@ -125,8 +125,13 @@ body {
    font-weight: bolder;
 
 }
+.contenedor .widget-1:hover {
+    transform: scale(1.1);
+    color:rgb(225, 118, 211)}
+
 
 .contenedor .widget-2 {
+
     grid-area: widget-2;
     height: 260px;
     background: url(./img/sirena.png);
@@ -134,13 +139,21 @@ body {
 
 }
 
+.contenedor .widget-2:hover {
+    transform: scale(1.1);
+    color:rgb(225, 118, 211)}
+
 .contenedor .widget-3 {
     grid-area: widget-3;
     height: 260px;
     background: url(./img/cortea.png);
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    transition: all 0.20;
 }
-
+.contenedor .widget-3:hover {
+    transform: scale(1.1);
+    color:rgb(225, 118, 211)}
 
 
 
