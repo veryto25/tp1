@@ -39,6 +39,7 @@ body {
 .contenedor .pie {
     padding: 20px;
     border-radius: 8px;
+
 }
 
 .contenedor .encabezado {
@@ -56,7 +57,7 @@ body {
 
 .contenedor .contenido {
     background: url(./img/fondo\ contenido.png);
-    background-repeat: no-repeat;
+    gap: 8px;
     opacity: 70%;
     grid-area: contenido;
     font-family: 'Poppins', sans-serif;
@@ -103,6 +104,13 @@ body {
 
 }
 
+.boton:hover {
+    transform: scale(1.1);
+    background-color: rgb(156, 156, 156);
+    opacity: 70%;
+    color: rgb(239, 236, 238)
+}
+
 .contenedor .widget-1,
 .contenedor .widget-2,
 .contenedor .widget-3 {
@@ -114,20 +122,22 @@ body {
     /*utilizamos flexbox para alinear el contenido*/
     display: flex;
     align-items: top;
-    justify-content:left;
+    justify-content: left;
 }
 
 .contenedor .widget-1 {
     grid-area: widget-1;
-    height:260px;
+    height: 260px;
     background: url(./img/princess.png);
     font-family: 'Poppins', sans-serif;
-   font-weight: bolder;
+    font-weight: bolder;
 
 }
+
 .contenedor .widget-1:hover {
     transform: scale(1.1);
-    color:rgb(225, 118, 211)}
+    color: rgb(225, 118, 211)
+}
 
 
 .contenedor .widget-2 {
@@ -141,7 +151,8 @@ body {
 
 .contenedor .widget-2:hover {
     transform: scale(1.1);
-    color:rgb(225, 118, 211)}
+    color: rgb(225, 118, 211)
+}
 
 .contenedor .widget-3 {
     grid-area: widget-3;
@@ -151,9 +162,88 @@ body {
     overflow: hidden;
     transition: all 0.20;
 }
+
 .contenedor .widget-3:hover {
     transform: scale(1.1);
-    color:rgb(225, 118, 211)}
+    color: rgb(225, 118, 211)
+}
+
+.contenedor .contenido .contenido1 {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+  
+
+    justify-content: center;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.contenedor .contenido .contenido2 {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+  
+    justify-content: center;
+    margin: auto;
+    border-radius: 8px;
+}
+
+
+
+.contenedor .contenido .contenido1 .card {
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba (0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 10px;
+    background-color: antiquewhite;
+    text-align: center;
+    transition: all 0.25s;
+    
+}
+
+.contenedor .contenido .contenido2 .card1 {
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba (0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 10px;
+    background-color: antiquewhite;
+    text-align: center;
+    transition: all 0.25s;
+
+}
+
+
+
+.contenedor .contenido .contenido1 .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+.contenedor .contenido .contenido2 .card1:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+.contenedor .contenido .contenido1 .card img {
+    width: 330px;
+    height: 220px;
+
+}
+
+.contenedor .contenido .contenido2 .card1 img {
+    width: 330px;
+    height: 220px;
+
+}
 
 
 
@@ -165,15 +255,15 @@ body {
     height: 70px;
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
-    
-};
+
+}
 
 
 .encabezado1 {
     text-align: right;
     font-size: 65px;
     padding: 10px;
-    
+
 }
 
 @media screen and (max-width: 768px) {
@@ -186,7 +276,7 @@ body {
             "widget-3 widget-3 widget-3 widget-3"
             "pie pie pie pie";
     }
-        
+
     .contenedor .encabezado {
         background: url(./img/carrusel3small.png);
         position: relative;
@@ -203,15 +293,17 @@ body {
         font-size: 40px;
         padding: 5px;
     }
-    
-    .contenedor .widget-3{
+
+    .contenedor .widget-3 {
         background: url(./img/cortear1.png);
-       
+
     }
-    .contenedor .widget-2{
+
+    .contenedor .widget-2 {
         background: url(./img/sirenar1.png);
     }
-    .contenedor .widget-1{
+
+    .contenedor .widget-1 {
         background: url(./img/princessr1.png);
     }
 }
@@ -227,7 +319,7 @@ body {
             "pie pie pie pie";
 
     }
-    
+
     .contenedor .encabezado {
         background: url(./img/carrusel3small.png);
         position: relative;
