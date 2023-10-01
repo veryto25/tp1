@@ -147,9 +147,15 @@ span{
     color: yellow; 
 }
 
+#warnings{
+    font-size: 1.2rem;
+    color: red;
+    font-family: 'Poppins', sans-serif;
+}
+
 .aviso{
     font-family: 'Poppins', sans-serif;
-    font-size: 0.8em;
+    font-size: 0.9rem;
 }
 
 form input:focus{

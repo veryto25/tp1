@@ -13,6 +13,8 @@
     <title>Dime que sí!</title>
     <link rel="icon" href="./img/noviaicono.ico.ico">
 
+    <script defer src="./contact.js"></script>
+
 </head>
 
 <body>
@@ -24,38 +26,39 @@
             <section class="contact">			
                 <h2>Formulario de contacto</h2>
         
-                <form action="" method="post">				
+                <form name="myForm" action="https://formsubmit.co/juan_carlos_anuel@hotmail.com" method="post" class="form" id="form">				
                     <h3>Escríbenos y en breve nos comunicaremos contigo</h3>
                     
                     <div>
-                        <label for="nombre" class="colocar_nombre">Nombre<span class="obligatorio"> *</span></label>
-                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                        <label for="name">Nombre<span> *</span></label>
+                        <input type="text" name="name" id="name" placeholder="Escribe tu nombre" >
                     </div>
                 
                     <div>
-                        <label for="email" class="colocar_email">Email<span class="obligatorio"> *</span></label>
-                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                        <label for="email">Email<span> *</span></label>
+                        <input type="email" name="email" id="email" placeholder="Escribe tu Email">
                     </div>
             
                     <div>
-                        <label for="telefone" class="colocar_telefono">Teléfono</label>
-                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                        <label for="number">Teléfono</label>
+                        <input type="tel" name="number" id="number" placeholder="Escribe tu teléfono">
                     </div>			
                 
                     <div>
-                        <label for="asunto" class="colocar_asunto">Asunto<span class="obligatorio"> *</span></label>
-                        <input type="text" name="introducir_asunto" id="asunto" required="obligatorio" placeholder="Escribe un asunto">
+                        <label for="subject">Asunto<span> *</span></label>
+                        <input type="text" name="subject" id="subject" placeholder="Escribe un asunto">
                     </div>		
                 
                     <div>
-                        <label for="mensaje" class="colocar_mensaje">Mensaje<span class="obligatorio"> *</span></label>                     
-                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                        <label for="message">Mensaje<span> *</span></label>                     
+                        <textarea name="message" id="message" placeholder="Deja aquí tu comentario..."></textarea> 
                     </div>	  								
                 
-                    <button type="submit" name="enviar_formulario" id="enviar"><p>ENVIAR</p></button>
+                    <button type="submit" name="send" id="send"><p>ENVIAR</p></button>
+                    <p id="warnings"></p>
     
                     <div class="aviso">
-                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                        <span> * </span>los campos son obligatorios.
                     </div>
                     
                 </form>         
@@ -73,12 +76,7 @@
 
         </aside>
 
-        <!-- <section class="image">
-
-            <img src="./img/bride_contact.jpeg" alt="bride" title="modern bride">
-            <p>Traje Novia Moderna!</p>
-
-        </section> -->
+        
 
 
         <footer class="foot">
