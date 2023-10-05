@@ -5,15 +5,6 @@ const asunto = document.getElementById("subject")
 const parrafo = document.getElementById("warnings")
 const mensaje = document.getElementById("message")
 
-// function validateForm(){
-//     let formulario = document.forms["myForm"]["name"]["email"]["number"]["subject"]["message"]["send"].value;
-
-//     if (formulario == ""){
-//         alert("no validado!");
-//         return false;
-//     }
-// }
-
 form.addEventListener("submit", e => {
     e.preventDefault()
 
@@ -61,25 +52,3 @@ function cleanForm(){
 }
 
 
-
-// const $form = document.querySelector('#form')
-
-// $form.addEventListener('submit', handlesubmit)
-
-// async function handlesubmit(event){
-//     event.preventDefault()
-//     const form = new FormData(this)
-//     const response = await fetch(this.action, {
-//         method: this.method,
-//         body: form,
-//         headers: {
-//             'Accept': 'application/json'
-//         }
-//     })
-
-//     if (response.ok){
-//         this.reset()
-//         alert("Gracias por contactarnos! En breve nos comunicaremos contigo!")
-//     }
-
-// }
