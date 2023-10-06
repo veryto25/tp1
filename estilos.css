@@ -57,11 +57,13 @@ body {
 
 .contenedor .contenido {
     background: url(./img/fondo\ contenido.png);
-    gap: 8px;
+      
     opacity: 70%;
     grid-area: contenido;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
+    justify-content: center;
+    padding: 30px;
 }
 
 .contenedor .sidebar {
@@ -168,84 +170,6 @@ body {
     color: rgb(225, 118, 211)
 }
 
-.contenedor .contenido .contenido1 {
-    width: 100%;
-    max-width: 1200px;
-    height: 430px;
-    display: flex;
-  
-
-    justify-content: center;
-    margin: auto;
-    border-radius: 8px;
-}
-
-.contenedor .contenido .contenido2 {
-    width: 100%;
-    max-width: 1200px;
-    height: 430px;
-    display: flex;
-  
-    justify-content: center;
-    margin: auto;
-    border-radius: 8px;
-}
-
-
-
-.contenedor .contenido .contenido1 .card {
-    width: 330px;
-    height: 430px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba (0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 10px;
-    background-color: antiquewhite;
-    text-align: center;
-    transition: all 0.25s;
-    
-}
-
-.contenedor .contenido .contenido2 .card1 {
-    width: 330px;
-    height: 430px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba (0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 10px;
-    background-color: antiquewhite;
-    text-align: center;
-    transition: all 0.25s;
-
-}
-
-
-
-.contenedor .contenido .contenido1 .card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-
-}
-
-.contenedor .contenido .contenido2 .card1:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-
-}
-
-.contenedor .contenido .contenido1 .card img {
-    width: 330px;
-    height: 220px;
-
-}
-
-.contenedor .contenido .contenido2 .card1 img {
-    width: 330px;
-    height: 220px;
-
-}
-
-
 
 .contenedor .pie {
     background: rgb(181, 163, 169);
@@ -268,23 +192,21 @@ body {
 
 @media screen and (max-width: 768px) {
     .contenedor {
-        grid-template-areas: "encabezado encabezado encabezado encabezado"
-            "sidebar sidebar sidebar sidebar"
+        grid-template-areas: "encabezado encabezado encabezado encabezado "
+            "sidebar sidebar sidebar sidebar "
             "contenido contenido contenido contenido"
             "widget-1 widget-1 widget-1 widget-1"
-            "widget-2 widget-2 widget-2 widget-2"
+            "widget-2 widget-2 widget-2 widget-2 "
             "widget-3 widget-3 widget-3 widget-3"
             "pie pie pie pie";
     }
 
     .contenedor .encabezado {
         background: url(./img/carrusel3small.png);
+        background-size: cover;
         position: relative;
         grid-area: encabezado;
         height: 400px;
-
-        display: grid;
-
 
     }
 
@@ -294,28 +216,37 @@ body {
         padding: 5px;
     }
 
+
+
     .contenedor .widget-3 {
         background: url(./img/cortear1.png);
+        grid-area: widget-3;
+
 
     }
 
     .contenedor .widget-2 {
         background: url(./img/sirenar1.png);
+        grid-area: widget-2;
     }
 
     .contenedor .widget-1 {
         background: url(./img/princessr1.png);
+        grid-area: widget-1;
     }
+
 }
+
+
 
 @media screen and (max-width: 450px) {
     .contenedor {
         grid-template-areas: "encabezado encabezado encabezado encabezado"
+            "sidebar sidebar sidebar sidebar"
             "contenido contenido contenido contenido"
             "widget-1 widget-1 widget-1 widget-1"
             "widget-2 widget-2 widget-2 widget-2"
             "widget-2 widget-2 widget-2 widget-3"
-            "sidebar sidebar sidebar sidebar"
             "pie pie pie pie";
 
     }
@@ -329,7 +260,7 @@ body {
         font-size: 30px;
         font-weight: lighter;
 
-        display: grid;
+
 
 
     }
@@ -340,4 +271,11 @@ body {
         font-weight: lighter;
         padding: 5px;
     }
+
+    .contenedor .contenido {
+        grid-area: contenido;
+        display: block;
+        background-size: cover;
+    }
+
 }
