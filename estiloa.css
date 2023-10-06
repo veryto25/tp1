@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(230, 230, 230);
+    color: #000;
+    font-family: 'Italianno', cursive;
+    display: flex
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    /*ancho máximo de la página*/
+    margin: 20px auto;
+    /*auto permite centrar nuestra página en forma horizontal*/
+    display: grid;
+    gap: 10px;
+    /*nos ahorramos tenes que poner márgenes entre los elementos*/
+
+    /*3 columnas: contenido (con 2 widgets) + sidebar*/
+    grid-template-columns: repeat(4, 1fr);
+
+    /*4 filas: header, contenido, widgets, footer*/
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "encabezado encabezado encabezado encabezado"
+        "sidebar contenido contenido contenido"
+        "sidebar contenido contenido contenido"
+        "pie pie pie pie";
+}
+
+.contenedor>div,
+.contenedor .encabezado,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .pie {
+    padding: 20px;
+    border-radius: 8px;
+
+}
+
+.contenedor .encabezado {
+    background: url(./img/carrusel3.png);
+    background-repeat: no-repeat;
+    position: relative;
+    grid-area: encabezado;
+    height: 400px;
+    color: antiquewhite;
+    font-size: 30px;
+    display: grid;
+
+
+}
+
+.contenedor .contenido {
+    background: url(./img/fondo\ contenido.png);
+    display: grid;
+    opacity: 70%;
+    grid-area: contenido;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    justify-content: center;
+    padding: 30px;
+    grid-template-columns: repeat(3, 1fr);
+
+    /*4 filas: header, contenido, widgets, footer*/
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "card1 card2 card3"
+        "card4 card5 card6"
+        "card7 card8 card9"
+
+}
+
+.contenedor .sidebar {
+    background: url(./img/slider\ fondo.png);
+    background-size: cover;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    grid-area: sidebar;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+    float: none;
+
+}
+
+.boton {
+    display: block;
+
+    background-color: lightpink;
+    opacity: 70%;
+    margin: 5px;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+    float: none;
+    gap: 5px;
+    border-radius: 8px;
+
+
+}
+
+.boton:hover {
+    transform: scale(1.1);
+    background-color: rgb(156, 156, 156);
+    opacity: 70%;
+    color: rgb(239, 236, 238)
+}
+
+.contenedor .pie {
+    background: rgb(181, 163, 169);
+    color: #050404;
+    grid-area: pie;
+
+    height: 70px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+
+}
+
+
+.encabezado1 {
+    text-align: right;
+    font-size: 65px;
+    padding: 10px;
+
+}
+
+/* Diseño para tarjetas */
+.contenedor .contenido {
+    width: 97.5%;
+    grid-area: contenido;
+    padding: 10px;
+
+    justify-content: center;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.contenedor .contenido .card {
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba (0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 10px;
+    background-color: antiquewhite;
+    text-align: center;
+    transition: all 0.25s;
+    position: relative;
+}
+
+.contenedor .contenido .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor .contenido .card img {
+    width: -webkit-fill-available;
+}
+
+
+.contenedor .contenido .card.card1 {
+    grid-area: card1;
+}
+
+.contenedor .contenido .card.card2 {
+    grid-area: card2;
+}
+
+.contenedor .contenido .card.card3 {
+    grid-area: card3;
+}
+
+.contenedor .contenido .card.card4 {
+    grid-area: card4;
+}
+
+.contenedor .contenido .card.card5 {
+    grid-area: card5;
+}
+
+.contenedor .contenido .card.card6 {
+    grid-area: card6;
+}
+
+.contenedor .contenido .card.card7 {
+    grid-area: card7;
+}
+
+.contenedor .contenido .card.card8 {
+    grid-area: card8;
+}
+
+.contenedor .contenido .card.card9 {
+    grid-area: card9;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado encabezado "
+            "sidebar sidebar sidebar sidebar "
+            "contenido contenido contenido contenido"
+            "contenido contenido contenido contenido"
+            "contenido contenido contenido contenido"
+            "pie pie pie pie";
+    }
+
+    .contenedor .encabezado {
+        background: url(./img/carrusel3small.png);
+        background-size: cover;
+        position: relative;
+        grid-area: encabezado;
+        height: 400px;
+
+    }
+
+    .encabezado1 {
+        text-align: right;
+        font-size: 40px;
+        padding: 5px;
+    }
+
+    .contenedor .contenido {
+        background: url(./img/fondo\ contenido.png);
+
+        display: grid;
+        opacity: 70%;
+        grid-area: contenido;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        justify-content: center;
+        padding: 30px;
+        grid-template-columns: repeat(4, 1fr);
+
+        /*4 filas: header, contenido, widgets, footer*/
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "card1 card1 card2 card2"
+            "card3 card3 card4 card4"
+            "card5 card5 card6 card6"
+            "card7 card7 card8 card8"
+            "card9 card9 . ."
+
+
+    }
+
+    /* Diseño para tarjetas */
+    .contenedor .contenido {
+        width: 97.5%;
+        grid-area: contenido;
+        padding: 10px;
+
+        justify-content: center;
+        margin: auto;
+        border-radius: 8px;
+    }
+
+    .contenedor .contenido .card {
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba (0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 10px;
+        background-color: antiquewhite;
+        text-align: center;
+        transition: all 0.25s;
+        position: relative;
+
+    }
+
+    .contenedor .contenido .card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .contenedor .contenido .card img {
+        width: -webkit-fill-available;
+
+    }
+
+
+    .contenedor .contenido .card.card1 {
+        grid-area: card1;
+    }
+
+    .contenedor .contenido .card.card2 {
+        grid-area: card2;
+    }
+
+    .contenedor .contenido .card.card3 {
+        grid-area: card3;
+    }
+
+    .contenedor .contenido .card.card4 {
+        grid-area: card4;
+    }
+
+    .contenedor .contenido .card.card5 {
+        grid-area: card5;
+    }
+
+    .contenedor .contenido .card.card6 {
+        grid-area: card6;
+    }
+
+    .contenedor .contenido .card.card7 {
+        grid-area: card7;
+    }
+
+    .contenedor .contenido .card.card8 {
+        grid-area: card8;
+    }
+
+    .contenedor .contenido .card.card9 {
+        grid-area: card9;
+    }
+
+}
+
+
+
+@media screen and (max-width: 450px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+            "sidebar sidebar sidebar sidebar"
+            "contenido contenido contenido contenido"
+            "contenido contenido contenido contenido"
+            "contenido contenido contenido contenido"
+            "pie pie pie pie";
+
+    }
+
+    .contenedor .encabezado {
+        background: url(./img/carrusel3xsmall.png);
+        background-size: cover;
+        position: relative;
+        grid-area: encabezado;
+        height: 400px;
+        color: antiquewhite;
+        font-size: 30px;
+        font-weight: lighter;
+
+
+
+
+    }
+
+    .encabezado1 {
+        text-align: right;
+        font-size: 40px;
+        font-weight: lighter;
+        padding: 5px;
+    }
+
+    .contenedor .contenido {
+        grid-area: contenido;
+        display: block;
+    }
+
+    .contenedor .contenido {
+        background: url(./img/fondo\ contenido.png);
+
+        display: grid;
+        opacity: 70%;
+        grid-area: contenido;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        justify-content: center;
+        padding: 30px;
+        grid-template-columns: repeat(4, 1fr);
+
+        /*4 filas: header, contenido, widgets, footer*/
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "card1 card1 card1 card1"
+            "card2 card2 card2 card2"
+            "card3 card3 card3 card3"
+            "card4 card4 card4 card4"
+            "card5 card5 card5 card5"
+            "card6 card6 card6 card6"
+            "card7 card7 card7 card7"
+            "card8 card8 card8 card8"
+            "card9 card9 card9 card9"
+
+
+    }
+
+    /* Diseño para tarjetas */
+    .contenedor .contenido {
+        width: 97.5%;
+        grid-area: contenido;
+        padding: 10px;
+
+        justify-content: center;
+        margin: auto;
+        border-radius: 8px;
+    }
+
+    .contenedor .contenido .card {
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba (0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 10px;
+        background-color: antiquewhite;
+        text-align: center;
+        transition: all 0.25s;
+        position: relative;
+
+    }
+
+    .contenedor .contenido .card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .contenedor .contenido .card img {
+        width: -webkit-fill-available;
+
+    }
+
+
+    .contenedor .contenido .card.card1 {
+        grid-area: card1;
+    }
+
+    .contenedor .contenido .card.card2 {
+        grid-area: card2;
+    }
+
+    .contenedor .contenido .card.card3 {
+        grid-area: card3;
+    }
+
+    .contenedor .contenido .card.card4 {
+        grid-area: card4;
+    }
+
+    .contenedor .contenido .card.card5 {
+        grid-area: card5;
+    }
+
+    .contenedor .contenido .card.card6 {
+        grid-area: card6;
+    }
+
+    .contenedor .contenido .card.card7 {
+        grid-area: card7;
+    }
+
+    .contenedor .contenido .card.card8 {
+        grid-area: card8;
+    }
+
+    .contenedor .contenido .card.card9 {
+        grid-area: card9;
+    }
+
+}
+
+
