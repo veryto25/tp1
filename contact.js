@@ -27,8 +27,8 @@ form.addEventListener("submit", e => {
         entrar = true
     }
 
-    if(asunto.value.length > 20){
-        warnings += `Asunto máximo 20 caracteres. <br>`
+    if(asunto.value.length > 20 || asunto.value.length < 3){
+        warnings += `Asunto min 3 máx 20 caracteres. <br>`
         entrar = true
     }
 

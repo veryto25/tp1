@@ -22,7 +22,7 @@ body {
                          "foot";
 
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin: 20px auto;
     gap: 20px;
     padding: 20px;
@@ -171,11 +171,17 @@ form textarea:focus{
 .foot{
     grid-area: foot;
 
-    background-color: darkblue;
+    /* background-color: darkblue;
     color: #fff;
     border-radius: 10px;
     padding: 20px;
-    font-size: 1.5rem;
+    font-size: 1.5rem; */
+
+    background: rgb(181, 163, 169);
+    color: #050404;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .image{
