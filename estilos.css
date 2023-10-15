@@ -257,6 +257,7 @@ body {
 
     .contenedor .encabezado {
         background: url(./img/carrusel3xsmall.png);
+        background-size: cover;
         position: relative;
         grid-area: encabezado;
         height: 400px;
