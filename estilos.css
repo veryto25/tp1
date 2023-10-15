@@ -136,8 +136,12 @@ body {
 
 }
 
+
+
+
 .contenedor .widget-1:hover {
     transform: scale(1.1);
+    
     color: rgb(225, 118, 211)
 }
 
@@ -252,7 +256,7 @@ body {
     }
 
     .contenedor .encabezado {
-        background: url(./img/carrusel3small.png);
+        background: url(./img/carrusel3xsmall.png);
         position: relative;
         grid-area: encabezado;
         height: 400px;
