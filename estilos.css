@@ -179,10 +179,11 @@ body {
     background: rgb(181, 163, 169);
     color: #050404;
     grid-area: pie;
-
+    
     height: 70px;
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
+    
 
 }
 
@@ -192,6 +193,13 @@ body {
     font-size: 65px;
     padding: 10px;
 
+}
+.copyright {
+    text-align: right;
+}
+.copyright:hover{
+    filter: blur(2px);
+    transition: 0.2s;
 }
 
 @media screen and (max-width: 768px) {
