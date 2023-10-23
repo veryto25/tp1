@@ -78,7 +78,7 @@ section img:hover {
 
 .contenedor .contenido {
     background: url(./img/slider\ fondo\ grande.png);
-
+    background-size: cover;
     opacity: 80%;
     grid-area: contenido;
     font-family: 'Poppins', sans-serif;
