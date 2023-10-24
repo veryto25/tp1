@@ -180,6 +180,12 @@ h4{
     padding: 5px;
 
 }
+.bottoncard:hover {
+    transform: scale(1.1);
+    background-color: rgb(156, 156, 156);
+    opacity: 70%;
+    color: rgb(239, 236, 238)
+}
 .copyright {
     text-align: right;
 }
