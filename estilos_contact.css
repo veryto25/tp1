@@ -44,6 +44,7 @@ body {
     font-family: 'Poppins', sans-serif;
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .aside a{
