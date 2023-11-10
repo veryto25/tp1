@@ -48,6 +48,7 @@ section img:hover {
 
     grid-template-areas: "encabezado encabezado encabezado encabezado"
         "sidebar contenido contenido contenido"
+        "sidebar contenido contenido contenido"
         "pie pie pie pie";
 }
 
@@ -135,7 +136,7 @@ section img:hover {
     background-color: #c932ad;
     transition: 0.2s;
     transform: scale(1.05);
-}
+} 
 
 .boton {
     display: block;
@@ -160,9 +161,10 @@ section img:hover {
     color: rgb(239, 236, 238)
 }
 
-.pie {
-    grid-area: foot;
-    width: 100%;
+.contenedor .pie {
+    grid-area: pie;
+    width:100% ;
+    display: flex;
 
     background: rgba(181, 163, 169, 0.801);
     color: #050404;
@@ -170,8 +172,7 @@ section img:hover {
     padding: 20px;
     font-family: 'Poppins', sans-serif;
 
-    display: flex;
-    justify-content: center;
+   
 }
 
 
