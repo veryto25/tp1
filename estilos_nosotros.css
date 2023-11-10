@@ -149,7 +149,7 @@ section img:hover {
     text-align: center;
     float: none;
     gap: 5px;
-    border-radius: 1024px;
+    border-radius: 8px;
 
 
 }
@@ -161,20 +161,18 @@ section img:hover {
     color: rgb(239, 236, 238)
 }
 
+
 .contenedor .pie {
-    grid-area: pie;
-    width:100% ;
-    display: flex;
-
-    background: rgba(181, 163, 169, 0.801);
+    background: rgb(181, 163, 169);
     color: #050404;
-    border-radius: 10px;
-    padding: 20px;
+    grid-area: pie;
+    
+    height: 110px;
     font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    
 
-   
 }
-
 
 
 .encabezado1 {
@@ -184,6 +182,14 @@ section img:hover {
     padding: 0.2px;
     opacity: 90%;
 }
+.copyright {
+    text-align: right;
+}
+.copyright:hover{
+    filter: blur(2px);
+    transition: 0.2s;
+}
+
 
 @media screen and (max-width: 768px) {
     .contenedor {
