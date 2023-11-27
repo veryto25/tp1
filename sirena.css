@@ -3,11 +3,18 @@
     padding: 0;
 }
 
+
 body {
-    background: rgb(230, 230, 230);
-    color: #000;
+
+    background-image: radial-gradient(circle, rgba(250, 157, 201, 0.2) 0%, rgba(253, 226, 226, 0.1) 100%), url(./img/brideOne.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    background-attachment: fixed;
+
     font-family: 'Italianno', cursive;
-    display: flex
+    display: flex;
+
 }
 
 .contenedor {
@@ -56,9 +63,9 @@ body {
 }
 
 .contenedor .contenido {
-    background: url(./img/fondo\ contenido.png);
+    
     display: grid;
-    opacity: 70%;
+    opacity: 85%;
     grid-area: contenido;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
@@ -75,7 +82,7 @@ body {
 }
 
 .contenedor .sidebar {
-    background: url(./img/slider\ fondo.png);
+   
     background-size: cover;
     display: block;
     align-items: center;
@@ -100,7 +107,7 @@ body {
 
 .boton {
     display: block;
-
+    opacity: 85%;
     background-color: lightpink;
     opacity: 70%;
     margin: 5px;
@@ -117,7 +124,7 @@ body {
 .boton:hover {
     transform: scale(1.1);
     background-color: rgb(156, 156, 156);
-    opacity: 70%;
+    opacity: 85%;
     color: rgb(239, 236, 238)
 }
 
@@ -125,13 +132,16 @@ body {
     background: rgb(181, 163, 169);
     color: #050404;
     grid-area: pie;
-
+    opacity: 70%;
     height: 70px;
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
 
 }
-
+.encabezado2{
+    font-size: 65px;
+    padding:10px;
+}
 
 .encabezado1 {
     text-align: right;
@@ -163,7 +173,7 @@ h4{
     transition: all 0.25s;
     position: relative;
     padding: 10px;
-    opacity: 90%;
+  
 }
 
 .contenedor .contenido .card:hover {
@@ -174,7 +184,7 @@ h4{
 .bottoncard { 
     background-color: rgb(254, 141, 222);
     color: honeydew;
-    opacity: 50%;
+
     border-radius: 10px;
     margin: 5px;
     padding: 5px;
@@ -183,7 +193,7 @@ h4{
 .bottoncard:hover {
     transform: scale(1.1);
     background-color: rgb(156, 156, 156);
-    opacity: 70%;
+
     color: rgb(239, 236, 238)
 }
 .copyright {

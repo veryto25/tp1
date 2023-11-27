@@ -1,83 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilos-iframe.css">
+    <link rel="stylesheet" href="estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Courgette&family=Dancing+Script&family=Great+Vibes&family=Italianno&family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Bebas+Neue&family=Hind:wght@300&family=Italianno&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet">
+    <link
+        href="https: //fonts.googleapis.com/css2? family= Allura & family= Bebas+Neue & family= Hind:wght@300 & family= Italianno & family= Montserrat:wght@300 & display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Bebas+Neue&family=Hind:wght@300&family=Italianno&family=Montserrat:wght@300&family=Poppins:wght@100&display=swap"
+        rel="stylesheet">
 
-    <title>Dime que sí!</title>
+
+    <title>Ubicación</title>
     <link rel="icon" href="./img/noviaicono.ico.ico">
 </head>
+
 <body>
-    
-<section class="container-iframe">
+    <section class="contenedor">
+        <header class="encabezado">
+            <div class="encabezado2">
+                <h2>Nuestra ubicación</h2>
+            </div>
 
-    <aside class="aside">
+            <br><br><br><br>
+            <div class="encabezado1">
+                <h3> Dime que sí! </h3>
 
-        <a href="index.html" class="boton" target="_blank">Home</a>
-        <a href="nosotros.html" class="boton" target="_blank">Nosotros</a>
-        <a href="princess.html" class="boton" target="_blank">Estilos Princesa</a>
-        <a href="sirena.html" class="boton" target="_blank">Estilos Sirena</a>
-        <a href="estiloa.html" class="boton" target="_blank">Estilos A</a>
-        <a href="iframe.html" class="boton" target="_blank">Ubicación</a>
-        <a href="contact.html" class="boton" target="_blanck" >Contactos</a>
+            </div>
+        </header>
 
-    </aside>
 
-    <section class="interes">
+        <nav class="sidebar">
+            <a class="boton" href="index.html">Home</a>
+            <a class="boton" href="nosotros.html" >Nosotros</a>
+            <a class="boton" href="princess.html" >Estilos Princesa</a>
+            <a class="boton" href="sirena.html" >Estilos Sirena</a>
+            <a class="boton" href="estiloa.html" >Estilos A</a>
+            <a class="boton" href="contact.html">Contactos</a>
+            <a class="boton" href="iframe.html">Ubicación</a>
 
-        <div class="div-h2">
-            <h2 class="h2-iframe">Sección de Interés</h2>
-        </div>
 
-        <div class="div-iframe">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d641.415487593467!2d-58.381780259716905!3d-34.60364529463113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1696703755288!5m2!1ses-419!2sar" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade;"></iframe>
-        </div>
+        </nav>
+        <main class="contenido">
+            <section class="interes">
 
-        <div class="p-iframe">
-            <p>Estamos ubicados muy cerca del Obelisco!</p>
-            <p>No esperes hasta último minuto!</p>
-        </div>
+                <div class="div-h2">
+                    <h2 class="h2-iframe">Sección de Interés</h2>
+                </div>
 
+                <div class="div-iframe">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d641.415487593467!2d-58.381780259716905!3d-34.60364529463113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1696703755288!5m2!1ses-419!2sar"
+                        width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade;"></iframe>
+                </div>
+
+                <div class="p-iframe">
+                    <p>Estamos ubicados muy cerca del Obelisco!</p>
+                    <p>No esperes hasta último minuto!</p>
+                </div>
+
+            </section>
+
+            <section class="sec-weather">
+
+                <div class="p-weather">
+                  
+                    <p>¿Querés saber el estado del clima?</p>
+                </div>
+
+                <div class="div-button">
+                    <button id="apiButton">CLIMA</button>
+                </div>
+
+                <div class="div-p">
+                    <p id="apiData"></p>
+                </div>
+
+            </section>
+        </main>
+        <footer class="pie">
+            <h3>Contactanos</h3>
+            <div>
+                <a href="https://www.facebook.com/noviasmodernas.ba?locale=es_LA"><img class="sociales"
+                        src="./img/facefooter.png" alt="face"></a>
+                <a href="https://www.instagram.com/nevadanovias/?hl=es"><img class="sociales"
+                        src="./img/instafooter.png" alt="instagram"></a>
+                <a href="https://web.whatsapp.com/"><img class="sociales" src="./img/whattsapfooter.png"
+                        alt="whattsap"></a>
+            </div>
+            <div>
+                <p class="copyright">&copy; Codo a Codo. 2023</p>
+            </div>
+
+
+        </footer>
+
+        <script src="./app-iframe.js"></script>
+
+       
     </section>
-
-    <section class="sec-weather">
-
-        <div class="p-weather">
-            <p>¿Querés saber el estado del clima?</p>
-        </div>
-
-        <div class="div-button">
-            <button id="apiButton">CLIMA</button>
-        </div>
-        
-        <div class="div-p">
-            <p id="apiData"></p>
-        </div>
-
-    </section>
-
-    <footer class="foot">
-        
-        <div>
-            <a href="https://www.facebook.com/noviasmodernas.ba?locale=es_LA"><img class="sociales" src="./img/facefooter.png" alt="face"></a>
-            <a href="https://www.instagram.com/nevadanovias/?hl=es"><img class="sociales" src="./img/instafooter.png" alt="instagram"></a>
-            <a href="https://web.whatsapp.com/"><img class="sociales" src="./img/whattsapfooter.png" alt="whattsap"></a>
-        </div>
-
-        <div>
-            <p class="copyright">&copy; Codo a Codo. 2023</p>
-        </div>
-
-    </footer>
-
-
-    <script src="./app-iframe.js"></script>
-
-</section>
-
 </body>
+
 </html>

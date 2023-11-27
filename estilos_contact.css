@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    text-decoration: none;
+
 }
 
 body {
-    background-image: radial-gradient(circle, rgba(250,157,201,0.2) 0%, rgba(253,226,226,0.1) 100%) ,url(./img/brideOne.jpg);
+    background-image: radial-gradient(circle, rgba(250, 157, 201, 0.2) 0%, rgba(253, 226, 226, 0.1) 100%), url(./img/brideOne.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #fff;
@@ -15,163 +15,215 @@ body {
     display: flex;
 }
 
-.container{
-    display: grid;
-    grid-template-areas: "aside"
-                         "contact"
-                         "section-iframe"
-                         "foot";
-
+.contenedor {
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 20px auto;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
 
-    justify-content: center;
-    align-items: center;
+    grid-template-areas: "encabezado encabezado encabezado encabezado"
+        "sidebar contenido contenido contenido"
+        "sidebar contenido contenido contenido"
+        "pie pie pie pie";
 }
 
-.aside{
-    grid-area: aside;
+.contenedor>div,
+.contenedor .encabezado,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .pie {
+    padding: 20px;
+    border-radius: 8px;
 
-    background-color: rgba(250, 157, 196, 0.801);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+}
+
+.contenedor .encabezado {
+    background: url(./img/carrusel3.png);
+    opacity: 90%;
+    width: 1200px;
+
+    background-repeat: no-repeat;
+    position: relative;
+    grid-area: encabezado;
+    height: 400px;
+    color: antiquewhite;
+    font-size: 30px;
+    display: grid;
+
+
+
+}
+
+.encabezado2 {
+    font-size: 65px;
+    padding: 10px;
+}
+
+.encabezado1 {
+    text-align: right;
+    font-size: 65px;
+    padding: 10px;
+
+}
+
+.contenedor .contenido {
+
+
+    opacity: 70%;
+    grid-area: contenido;
     font-family: 'Poppins', sans-serif;
-    padding: 20px;
-    border-radius: 10px;
+    font-weight: bold;
+    justify-content: center;
+    padding: 30px;
+}
+
+.contenedor .sidebar {
+
+
+    display: block;
+    align-items: center;
+    justify-content: center;
+    grid-area: sidebar;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    /* font-weight: 900; */
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
     text-align: center;
+    float: none;
+
 }
 
-.aside a{
-    color: #fff;
-    padding: 5px;
-}
-
-.aside a:hover{
+.aside a:hover {
     color: #a25ad696;
     transform: scale(1.1);
     transition: .2s;
 }
 
-.contact{
-    display: grid;
-    grid-area: contact;
+.contact {
+    display: flexbox;
+
 }
 
-.contact h2{
+.contact h2 {
     font-family: 'Courgette', cursive;
-    font-size: 2em;
+    font-size: 26px;
     text-align: center;
     padding: 20px;
     color: #d660bb;
     transition: 2s;
 }
 
-.contact h3{
+.contact h3 {
     text-align: center;
     padding: 20px;
     font-size: 2rem;
     color: #8724ce;
 }
 
-form{
+form {
     border: 1px solid #8724ce;
     height: auto;
     margin: 20px auto;
-    border-radius: 10px;  
-    padding: 20px 20px; 
+    border-radius: 10px;
+    padding: 20px 20px;
     background-color: rgba(176, 78, 233, 0.2);
     color: #ffF;
 }
 
-input{
-    background-color: #fbfbfb; 
-    width: 98%; 
-    height: 40px; 
+input {
+    background-color: #fbfbfb;
+    width: 98%;
+    height: 40px;
     border: 1px solid #ab4493;
-    border-radius: 5px;  
-    margin-top: 10px;  
-    padding-left: 10px;
-    margin-bottom: 20px; 
-    font-family: 'Poppins', sans-serif;
-}
-
-textarea{
-    background-color: #fbfbfb; 
-    width: 98%; 
-    height: 150px; 
     border-radius: 5px;
-    border: 1px solid #ab4493;  
     margin-top: 10px;
     padding-left: 10px;
-    margin-bottom: 20px; 
-    padding-top: 15px; 
+    margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
-label{
-    display: block; 
-    float: center; 	
+textarea {
+    background-color: #fbfbfb;
+    width: 98%;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid #ab4493;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
     font-family: 'Poppins', sans-serif;
 }
 
-button{
-    height: 45px;  
+label {
+    display: block;
+    float: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    height: 45px;
     padding-left: 5px;
-    padding-right: 5px; 	
-    margin-bottom: 20px;  
-    margin-top: 10px; 	
-    background-color: #d660bb; 
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: #d660bb;
     border: 0.5px solid #d660bb;
-    border-radius: 10px;	 
-    width: 100%;   
+    border-radius: 10px;
+    width: 100%;
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     background-color: #c451a9;
     transition: 0.2s;
     transform: scale(1.03);
 }
 
 
-button p{
-    color: #fff; 
+button p {
+    color: #fff;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
 }
 
-span{
-    color: yellow; 
+span {
+    color: yellow;
 }
 
-#warnings{
+#warnings {
     font-size: 1.2rem;
     color: red;
     font-family: 'Poppins', sans-serif;
 }
 
-.aviso{
+.aviso {
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
 }
 
-form input:focus{
-    outline:0;
+form input:focus {
+    outline: 0;
     border: 1px solid #97d848;
 }
 
-form textarea:focus{
-    outline:0; 
+form textarea:focus {
+    outline: 0;
     border: 1px solid #97d848;
 }
 
-.section-iframe{
+.section-iframe {
     grid-area: section-iframe;
 
     background-color: rgba(250, 157, 238, 0.5);
@@ -180,7 +232,7 @@ form textarea:focus{
     padding: 20px;
 }
 
-.section-iframe-p p{
+.section-iframe-p p {
     color: #8724ce;
     text-align: center;
     font-size: 1.7rem;
@@ -188,12 +240,12 @@ form textarea:focus{
     transition: 1.5s;
 }
 
-.section-iframe-btn{
+.section-iframe-btn {
     display: flex;
     justify-content: center;
 }
 
-.section-iframe-btn a{
+.section-iframe-btn a {
     color: #fff;
     padding: 10px;
     background-color: #8724cecb;
@@ -203,47 +255,122 @@ form textarea:focus{
     text-align: center;
 }
 
-.section-iframe-btn a:hover{
+.section-iframe-btn a:hover {
     scale: 1.05;
     transition: .2S;
 }
-
-.foot{
-    grid-area: foot;
-
-    background: rgba(181, 163, 169, 0.801);
+.contenedor .pie {
+    background: rgb(181, 163, 169);
     color: #050404;
-    border-radius: 10px;
-    padding: 20px;
+    grid-area: pie;
+    opacity: 70%;
+    height: 70px;
     font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
 
-    display: flex;
-    justify-content: space-between;
+
+}
+.copyright {
+    text-align: right;
 }
 
-.sociales:hover{
-    scale: 1.05;
-    transition: 0.2S;
-}
-
-.copyright:hover{
+.copyright:hover {
     filter: blur(2px);
     transition: 0.2s;
 }
 
 
+.encabezado1 {
+    text-align: right;
+    font-size: 65px;
+    padding: 10px;
+
+}
+
+.boton {
+    display: block;
+
+    background-color: lightpink;
+    opacity: 70%;
+    margin: 5px;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+    float: none;
+    gap: 5px;
+    border-radius: 8px;
+}
+
+.boton:hover {
+    transform: scale(1.1);
+    background-color: rgb(156, 156, 156);
+    opacity: 70%;
+    color: rgb(239, 236, 238)
+}
+
 /* media */
-
-
-@media (width >= 768px) {
-
-    .aside{
-        display: flex;
-        flex-direction: row;
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado encabezado "
+            "sidebar sidebar sidebar sidebar "
+            "contenido contenido contenido contenido"
+            "pie pie pie pie";
     }
 
-    .aside a{
-        padding: 20px;
+    .contenedor .encabezado {
+        background: url(./img/carrusel3small.png);
+        background-size: cover;
+        position: relative;
+        grid-area: encabezado;
+        height: 400px;
+        width: 100%;
+
+    }
+
+    .encabezado1 {
+        text-align: right;
+        font-size: 40px;
+        padding: 5px;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 450px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado encabezado"
+            "sidebar sidebar sidebar sidebar"
+            "contenido contenido contenido contenido"
+            "pie pie pie pie";
+
+    }
+
+    .contenedor .encabezado {
+        background: url(./img/carrusel3xsmall.png);
+        background-size: cover;
+        position: relative;
+        grid-area: encabezado;
+        height: 400px;
+        color: rgb(254, 248, 254);
+        font-size: 30px;
+        font-weight: lighter;
+
+
+    }
+
+    .encabezado1 {
+        text-align: right;
+        font-size: 40px;
+        font-weight: lighter;
+        padding: 5px;
+    }
+
+    .contenedor .contenido {
+        grid-area: contenido;
+        display: block;
+        background-size: cover;
     }
 
 }
