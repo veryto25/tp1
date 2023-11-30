@@ -273,22 +273,23 @@ h4{
     .contenedor .contenido {
         background: url(./img/fondo\ contenido.png);
 
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
         opacity: 70%;
         grid-area: contenido;
         font-family: 'Poppins', sans-serif;
         font-weight: bold;
         justify-content: center;
         padding: 30px;
-        grid-template-columns: repeat(4, 1fr);
+        /* grid-template-columns: repeat(4, 1fr); */
 
         /*4 filas: header, contenido, widgets, footer*/
-        grid-template-rows: repeat(4, auto);
+        /* grid-template-rows: repeat(4, auto);
         grid-template-areas: "card1 card1 card2 card2"
             "card3 card3 card4 card4"
             "card5 card5 card6 card6"
             "card7 card7 card8 card8"
-            "card9 card9 . ."
+            "card9 card9 . ." */
 
 
     }
