@@ -49,7 +49,7 @@ body {
 }
 
 .contenedor .encabezado {
-    background: url(./img/carrusel3.png);
+    background: url(/tp1a/img/carrusel3.png);
     opacity: 90%;
     background-repeat: no-repeat;
     position: relative;
@@ -65,8 +65,9 @@ body {
 @keyframes shower{
     0%      {background:url(./img/carrusel3.png); }
     25%     {background:url(./img/carrousel6.png);}
-    50%     {background:url(./img/carrousel7.png);         } 
+    50%     {background:url(./img/carrousel7.png);} 
     75%     {background:url(./img/carrusel4.png);}
+
 }
 
 .contenedor .contenido {
